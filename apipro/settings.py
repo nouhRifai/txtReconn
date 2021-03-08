@@ -12,7 +12,6 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 
 from pathlib import Path
 import os
-import django_heroku
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -135,4 +134,3 @@ MEDIA_URL = "/media/"
 CORS_ALLOW_ALL_ORIGINS = True
 
 
-django_heroku.settings(locals())
