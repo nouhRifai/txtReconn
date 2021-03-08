@@ -33,7 +33,7 @@ class awsimageView(viewsets.ModelViewSet):
         img = cv2.imread(filepath)
         img = cv2.cvtColor(img,cv2.COLOR_BGR2RGB)
         result = pytesseract.image_to_string(img)
-        print("hi from python")
+        print(result[0:15])
         #store in the database
         # awsimage.objects.create(title = title, image = myImage)
         return JsonResponse({'message': 'image created', 'content':result}, status=200)
